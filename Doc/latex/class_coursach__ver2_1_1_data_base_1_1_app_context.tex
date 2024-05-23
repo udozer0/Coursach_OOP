@@ -1,0 +1,164 @@
+\doxysection{Coursach\+\_\+ver2.\+Data\+Base.\+App\+Context Class Reference}
+\hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context}{}\label{class_coursach__ver2_1_1_data_base_1_1_app_context}\index{Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}}
+
+
+Контекст базы данных для приложения, использующего Entity Framework Core и SQLite. Содержит Db\+Set для моделей Student, Class, Grade и Subject.  
+
+
+Inheritance diagram for Coursach\+\_\+ver2.\+Data\+Base.\+App\+Context\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coursach__ver2_1_1_data_base_1_1_app_context}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_coursach__ver2_1_1_data_base_1_1_app_context_ad78c6b4c7de97189fb877c40b13a2faa}{App\+Context}} (string db\+Path)
+\begin{DoxyCompactList}\small\item\em Конструктор, инициализирующий путь к базе данных. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_abb4c87ff97594ec3c28e320cbca8e095}\label{class_coursach__ver2_1_1_data_base_1_1_app_context_abb4c87ff97594ec3c28e320cbca8e095} 
+{\bfseries App\+Context} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию, инициализирующий базу данных с именем School.\+db. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_coursach__ver2_1_1_data_base_1_1_app_context_a89d43156d70180210a042f70592079af}{Create\+Database\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Асинхронное создание базы данных. \end{DoxyCompactList}\item 
+async Task \mbox{\hyperlink{class_coursach__ver2_1_1_data_base_1_1_app_context_a2c8b08a4dd68107c5ae5dc0b836ce25e}{Delete\+Database\+Async}} ()
+\begin{DoxyCompactList}\small\item\em Асинхронное удаление базы данных. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_coursach__ver2_1_1_data_base_1_1_app_context_af3d47b0c4ef6fcba0f956ac97375890c}{Database\+Exists}} ()
+\begin{DoxyCompactList}\small\item\em Проверяет, существует ли база данных. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coursach__ver2_1_1_data_base_1_1_app_context_a52801678e711da3e505fe2f5afc91ba4}{Save\+Database}} (string file\+Path)
+\begin{DoxyCompactList}\small\item\em Сохраняет копию базы данных в указанном пути. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+override void \mbox{\hyperlink{class_coursach__ver2_1_1_data_base_1_1_app_context_a7772c79ced66be6286620be64b007698}{On\+Configuring}} (Db\+Context\+Options\+Builder options\+Builder)
+\begin{DoxyCompactList}\small\item\em Конфигурирование параметров подключения к базе данных SQLite. \end{DoxyCompactList}\item 
+override void \mbox{\hyperlink{class_coursach__ver2_1_1_data_base_1_1_app_context_affa717dbcd214cea7366dd2087f15c8e}{On\+Model\+Creating}} (Model\+Builder model\+Builder)
+\begin{DoxyCompactList}\small\item\em Конфигурирование моделей для построения связей между сущностями базы данных. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_a34253501b41bcb28c6936cb35c4e01f8}\label{class_coursach__ver2_1_1_data_base_1_1_app_context_a34253501b41bcb28c6936cb35c4e01f8} 
+Db\+Set$<$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_student}{Student}} $>$ {\bfseries Students} = null!\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Таблица студентов. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_a96d1f8d6709096020494a37d64a70835}\label{class_coursach__ver2_1_1_data_base_1_1_app_context_a96d1f8d6709096020494a37d64a70835} 
+Db\+Set$<$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_class}{Class}} $>$ {\bfseries Classes} = null!\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Таблица классов. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_a532de5973511355a1e627dc8cf257f81}\label{class_coursach__ver2_1_1_data_base_1_1_app_context_a532de5973511355a1e627dc8cf257f81} 
+Db\+Set$<$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_grade}{Grade}} $>$ {\bfseries Grades} = null!\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Таблица оценок. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_ab74901c3e76f07ad57895e6eea357bf0}\label{class_coursach__ver2_1_1_data_base_1_1_app_context_ab74901c3e76f07ad57895e6eea357bf0} 
+Db\+Set$<$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_subject}{Subject}} $>$ {\bfseries Subjects} = null!\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Таблица предметов. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Контекст базы данных для приложения, использующего Entity Framework Core и SQLite. Содержит Db\+Set для моделей Student, Class, Grade и Subject. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_ad78c6b4c7de97189fb877c40b13a2faa}\index{Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}!AppContext@{AppContext}}
+\index{AppContext@{AppContext}!Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}}
+\doxysubsubsection{\texorpdfstring{AppContext()}{AppContext()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_data_base_1_1_app_context_ad78c6b4c7de97189fb877c40b13a2faa} 
+Coursach\+\_\+ver2.\+Data\+Base.\+App\+Context.\+App\+Context (\begin{DoxyParamCaption}\item[{string}]{db\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор, инициализирующий путь к базе данных. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em db\+Path} & Путь к базе данных\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_a89d43156d70180210a042f70592079af}\index{Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}!CreateDatabaseAsync@{CreateDatabaseAsync}}
+\index{CreateDatabaseAsync@{CreateDatabaseAsync}!Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}}
+\doxysubsubsection{\texorpdfstring{CreateDatabaseAsync()}{CreateDatabaseAsync()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_data_base_1_1_app_context_a89d43156d70180210a042f70592079af} 
+async Task Coursach\+\_\+ver2.\+Data\+Base.\+App\+Context.\+Create\+Database\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Асинхронное создание базы данных. 
+
+\begin{DoxyReturn}{Returns}
+Задача создания базы данных
+\end{DoxyReturn}
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_af3d47b0c4ef6fcba0f956ac97375890c}\index{Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}!DatabaseExists@{DatabaseExists}}
+\index{DatabaseExists@{DatabaseExists}!Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}}
+\doxysubsubsection{\texorpdfstring{DatabaseExists()}{DatabaseExists()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_data_base_1_1_app_context_af3d47b0c4ef6fcba0f956ac97375890c} 
+bool Coursach\+\_\+ver2.\+Data\+Base.\+App\+Context.\+Database\+Exists (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет, существует ли база данных. 
+
+\begin{DoxyReturn}{Returns}
+True, если база данных существует, иначе False
+\end{DoxyReturn}
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_a2c8b08a4dd68107c5ae5dc0b836ce25e}\index{Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}!DeleteDatabaseAsync@{DeleteDatabaseAsync}}
+\index{DeleteDatabaseAsync@{DeleteDatabaseAsync}!Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}}
+\doxysubsubsection{\texorpdfstring{DeleteDatabaseAsync()}{DeleteDatabaseAsync()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_data_base_1_1_app_context_a2c8b08a4dd68107c5ae5dc0b836ce25e} 
+async Task Coursach\+\_\+ver2.\+Data\+Base.\+App\+Context.\+Delete\+Database\+Async (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Асинхронное удаление базы данных. 
+
+\begin{DoxyReturn}{Returns}
+Задача удаления базы данных
+\end{DoxyReturn}
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_a7772c79ced66be6286620be64b007698}\index{Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}!OnConfiguring@{OnConfiguring}}
+\index{OnConfiguring@{OnConfiguring}!Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}}
+\doxysubsubsection{\texorpdfstring{OnConfiguring()}{OnConfiguring()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_data_base_1_1_app_context_a7772c79ced66be6286620be64b007698} 
+override void Coursach\+\_\+ver2.\+Data\+Base.\+App\+Context.\+On\+Configuring (\begin{DoxyParamCaption}\item[{Db\+Context\+Options\+Builder}]{options\+Builder}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Конфигурирование параметров подключения к базе данных SQLite. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em options\+Builder} & Построитель параметров опций\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_affa717dbcd214cea7366dd2087f15c8e}\index{Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}!OnModelCreating@{OnModelCreating}}
+\index{OnModelCreating@{OnModelCreating}!Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}}
+\doxysubsubsection{\texorpdfstring{OnModelCreating()}{OnModelCreating()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_data_base_1_1_app_context_affa717dbcd214cea7366dd2087f15c8e} 
+override void Coursach\+\_\+ver2.\+Data\+Base.\+App\+Context.\+On\+Model\+Creating (\begin{DoxyParamCaption}\item[{Model\+Builder}]{model\+Builder}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Конфигурирование моделей для построения связей между сущностями базы данных. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Builder} & Построитель моделей\\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_coursach__ver2_1_1_data_base_1_1_app_context_a52801678e711da3e505fe2f5afc91ba4}\index{Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}!SaveDatabase@{SaveDatabase}}
+\index{SaveDatabase@{SaveDatabase}!Coursach\_ver2.DataBase.AppContext@{Coursach\_ver2.DataBase.AppContext}}
+\doxysubsubsection{\texorpdfstring{SaveDatabase()}{SaveDatabase()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_data_base_1_1_app_context_a52801678e711da3e505fe2f5afc91ba4} 
+void Coursach\+\_\+ver2.\+Data\+Base.\+App\+Context.\+Save\+Database (\begin{DoxyParamCaption}\item[{string}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Сохраняет копию базы данных в указанном пути. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу для сохранения базы данных\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Udozer/source/repos/\+OOP/nt/\+Coursach\+\_\+ver2/\+Coursach\+\_\+ver2/\+Data\+Base/App\+Context.\+cs\end{DoxyCompactItemize}

@@ -1,0 +1,80 @@
+﻿<Window x:Class="Coursach_ver2.View.StudentReportWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Coursach_ver2.View"
+        mc:Ignorable="d"
+        Title="Отчет об ученике" Height="450" Width="800"
+        WindowStartupLocation="CenterScreen"
+        Background="#f0f0f0" Icon="/View/1.png">
+
+    <Window.Resources>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Arial"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="Margin" Value="10,5"/>
+        </Style>
+        <Style TargetType="DataGrid">
+            <Setter Property="Margin" Value="10"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="ColumnHeaderStyle">
+                <Setter.Value>
+                    <Style TargetType="DataGridColumnHeader">
+                        <Setter Property="Background" Value="#007acc"/>
+                        <Setter Property="Foreground" Value="White"/>
+                        <Setter Property="FontWeight" Value="Bold"/>
+                        <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" Margin="0,10">
+            <TextBlock Text="ФИО: " FontWeight="Bold" FontSize="16" />
+            <TextBlock Text="{Binding SelectedStudent.Name}" FontSize="20" Margin="5,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Возраст: " FontWeight="Bold" />
+            <TextBlock Text="{Binding SelectedStudent.Age}" Margin="0,0,0,0"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" Margin="10">
+            <TextBlock Text="Класс: " FontWeight="Bold" />
+            <TextBlock Text="{Binding SelectedStudent.Class.Name}" Margin="5,0,0,0"/>
+        </StackPanel>
+
+
+        <DataGrid x:Name="studentInfoDataGrid" Grid.Row="3" AutoGenerateColumns="False" ItemsSource="{Binding PerfomanceSubjects}" CanUserAddRows="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Предмет" Binding="{Binding Name}" Width="*" />
+                <DataGridTemplateColumn Header="Оценки" Width="*">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <ItemsControl ItemsSource="{Binding Grades}">
+                                <ItemsControl.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{Binding Data}" Margin="0,0,5,0" />
+                                            <TextBlock Text="{Binding Value}" />
+                                        </StackPanel>
+                                    </DataTemplate>
+                                </ItemsControl.ItemTemplate>
+                            </ItemsControl>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

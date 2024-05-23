@@ -1,0 +1,85 @@
+\doxysection{Coursach\+\_\+ver2.\+Model.\+Subject Class Reference}
+\hypertarget{class_coursach__ver2_1_1_model_1_1_subject}{}\label{class_coursach__ver2_1_1_model_1_1_subject}\index{Coursach\_ver2.Model.Subject@{Coursach\_ver2.Model.Subject}}
+
+
+Представляет предмет в школьной системе. Содержит информацию об идентификаторе, имени и связанных оценках.  
+
+
+Inheritance diagram for Coursach\+\_\+ver2.\+Model.\+Subject\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coursach__ver2_1_1_model_1_1_subject}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_subject_ad02e5c5b8f622d6479dc10388209e4bb}\label{class_coursach__ver2_1_1_model_1_1_subject_ad02e5c5b8f622d6479dc10388209e4bb} 
+{\bfseries Subject} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_subject_a63cd4c92cddf6591f873231f9c6a7968}{Subject}} (string name)
+\begin{DoxyCompactList}\small\item\em Конструктор для инициализации предмета с заданным именем. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_subject_ae1a802060d8011bd5dddab16a98cbb34}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string prop="{}"{})
+\begin{DoxyCompactList}\small\item\em Уведомляет об изменении свойства. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_subject_a3e636d605c729c27547dfebc341148e5}\label{class_coursach__ver2_1_1_model_1_1_subject_a3e636d605c729c27547dfebc341148e5} 
+string? {\bfseries Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Идентификатор предмета. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_subject_a5c29eb95c4b2cd23272b43e777a20953}\label{class_coursach__ver2_1_1_model_1_1_subject_a5c29eb95c4b2cd23272b43e777a20953} 
+string {\bfseries Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Название предмета. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_subject_ac30179ef007d8b4e09f0b04aa76e8420}\label{class_coursach__ver2_1_1_model_1_1_subject_ac30179ef007d8b4e09f0b04aa76e8420} 
+Observable\+Collection$<$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_grade}{Grade}} $>$ {\bfseries Grades} = new Observable\+Collection$<$\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_grade}{Grade}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Коллекция оценок, связанных с предметом. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_subject_a2ee9e6e4efde10398ccdda2fb22f2bf5}\label{class_coursach__ver2_1_1_model_1_1_subject_a2ee9e6e4efde10398ccdda2fb22f2bf5} 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Представляет предмет в школьной системе. Содержит информацию об идентификаторе, имени и связанных оценках. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_subject_a63cd4c92cddf6591f873231f9c6a7968}\index{Coursach\_ver2.Model.Subject@{Coursach\_ver2.Model.Subject}!Subject@{Subject}}
+\index{Subject@{Subject}!Coursach\_ver2.Model.Subject@{Coursach\_ver2.Model.Subject}}
+\doxysubsubsection{\texorpdfstring{Subject()}{Subject()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_model_1_1_subject_a63cd4c92cddf6591f873231f9c6a7968} 
+Coursach\+\_\+ver2.\+Model.\+Subject.\+Subject (\begin{DoxyParamCaption}\item[{string}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор для инициализации предмета с заданным именем. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Название предмета.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_subject_ae1a802060d8011bd5dddab16a98cbb34}\index{Coursach\_ver2.Model.Subject@{Coursach\_ver2.Model.Subject}!OnPropertyChanged@{OnPropertyChanged}}
+\index{OnPropertyChanged@{OnPropertyChanged}!Coursach\_ver2.Model.Subject@{Coursach\_ver2.Model.Subject}}
+\doxysubsubsection{\texorpdfstring{OnPropertyChanged()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_model_1_1_subject_ae1a802060d8011bd5dddab16a98cbb34} 
+void Coursach\+\_\+ver2.\+Model.\+Subject.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{prop}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Уведомляет об изменении свойства. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & Имя изменившегося свойства.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Udozer/source/repos/\+OOP/nt/\+Coursach\+\_\+ver2/\+Coursach\+\_\+ver2/\+Model/Subject.\+cs\end{DoxyCompactItemize}

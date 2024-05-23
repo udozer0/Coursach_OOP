@@ -1,0 +1,234 @@
+﻿<Window x:Class="Coursach_ver2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:i="http://schemas.microsoft.com/xaml/behaviors" xmlns:viewmodel="clr-namespace:Coursach_ver2.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:MainWindowViewModel}"
+        mc:Ignorable="d"
+        Title="Школа" Height="350" Width="625" Icon="/View/1.png">
+    <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+    </Window.Resources>
+
+
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <TabControl Grid.Row="0">
+            <TabItem Header="Школа">
+                <!-- Привязка к коллекции классов со списком учеников -->
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="230*"/>
+                        <ColumnDefinition Width="389*"/>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <CheckBox IsChecked="{Binding SortStudentsIndex, Mode=TwoWay}" Content="По алфавиту" Grid.Row="0" Grid.ColumnSpan="2" />
+
+                    <CheckBox IsChecked="{Binding SortClassesIndex, Mode=TwoWay}" Content="По возрастанию" Grid.ColumnSpan="2" Margin="0,15,0,0" Grid.RowSpan="2" />
+
+
+                    <TreeView ItemsSource="{Binding Classes}" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,15,0,0" Grid.RowSpan="2" >
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Students}">
+                                <TextBlock Text="{Binding Name}" />
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+
+                    </TreeView>
+
+
+                </Grid>
+
+
+            </TabItem>
+            <TabItem Header="Успеваемость">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <ComboBox x:Name="classesComboBox" Grid.Row="0" Margin="10" 
+                              ItemsSource="{Binding Classes}"
+                              DisplayMemberPath="Name"
+                              SelectedItem="{Binding SelectedClass}" />
+
+                    <ComboBox x:Name="subjectsComboBox" Grid.Row="1" Margin="10" 
+                              ItemsSource="{Binding Subjects}"
+                              DisplayMemberPath="Name"
+                              SelectedItem="{Binding SelectedSubject}" />
+
+                    <DataGrid Grid.Row="2" Margin="10" AutoGenerateColumns="False" ItemsSource="{Binding Students}" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ФИО ученика" Binding="{Binding Name}" Width="*" />
+                            <DataGridTemplateColumn Header="Оценки" Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ItemsControl ItemsSource="{Binding Grades}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Data}" Margin="0,0,5,0" />
+                                                        <TextBlock Text="{Binding Value}" />
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Ученик">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+
+                    <ComboBox x:Name="studentClassesComboBox" Grid.Row="0" Margin="10" 
+                              ItemsSource="{Binding Classes}"
+                              DisplayMemberPath="Name"
+                              SelectedItem="{Binding SelectedClass}" />
+
+                    <ComboBox x:Name="studentsComboBox" Grid.Row="1" Margin="10"
+                              ItemsSource="{Binding SelectedClass.Students}"
+                              DisplayMemberPath="Name"
+                              SelectedItem="{Binding SelectedStudent}" />
+
+                    <Button x:Name="reportButton" Grid.Row="3" Content="Отчет по ученику" Margin="10"
+                            Command="{Binding GenerateReportCommand}"
+                            IsEnabled="{Binding Path=SelectedStudent}" />
+
+
+                    <DataGrid x:Name="studentInfoDataGrid" Grid.Row="2" Margin="10" AutoGenerateColumns="False" ItemsSource="{Binding PerfomanceSubjects}" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Предмет" Binding="{Binding Name}" Width="*" />
+                            <DataGridTemplateColumn Header="Оценки" Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ItemsControl ItemsSource="{Binding Grades}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Data}" Margin="0,0,5,0" />
+                                                        <TextBlock Text="{Binding Value}" />
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Директорская" Visibility="{Binding IsDirectorTabVisible}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal">
+                        <TextBox Text="{Binding SearchText, UpdateSourceTrigger=PropertyChanged}" Margin="5" Width="150"/>
+                        <Button Content="Изменить" Margin="5" Command="{Binding ChangeStudentCommand}" />
+                        <Button Content="Удалить" Margin="5" Command="{Binding DeleteStudentCommand}" />
+                        <Button Content="Создать класс" Margin="5" Command="{Binding RegisterClassCommand}" />
+                    </StackPanel>
+                    <StackPanel Grid.Row="1" Orientation="Horizontal">
+                        <CheckBox IsChecked="{Binding SortFilterClassesIndex, Mode=TwoWay}" Content="По возрастанию" Margin="5" />
+                        <TextBlock Text="{Binding FilteredStudentCountText}" Margin="5" VerticalAlignment="Center"/>
+                    </StackPanel>
+                    <TreeView ItemsSource="{Binding FilteredClasses}" Grid.Row="2" SelectedItemChanged="TreeView_SelectedItemChanged">
+                        <TreeView.ItemTemplate>
+                            <HierarchicalDataTemplate ItemsSource="{Binding Students}">
+                                <TextBlock Text="{Binding Name}" />
+                                <HierarchicalDataTemplate.ItemContainerStyle>
+                                    <Style TargetType="TreeViewItem">
+                                        <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay}" />
+                                    </Style>
+                                </HierarchicalDataTemplate.ItemContainerStyle>
+                            </HierarchicalDataTemplate>
+                        </TreeView.ItemTemplate>
+                    </TreeView>
+                </Grid>
+
+            </TabItem>
+            <TabItem Header="Учительская " Visibility="{Binding IsTeacherTabVisible}">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <StackPanel Grid.Row="0" Orientation="Horizontal">
+                        <Button Content="Поставить оценку" Margin="5" Command="{Binding AddGradeCommand}" />
+                    </StackPanel>
+                    <ComboBox Grid.Row="2" Margin="10" ItemsSource="{Binding Subjects}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedAllSubject}"/>
+                    <DataGrid Grid.Row="3" Margin="10" AutoGenerateColumns="False" ItemsSource="{Binding AllSubStudents}" CanUserAddRows="False">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="ФИО ученика" Binding="{Binding Name}" Width="*" />
+                            <DataGridTextColumn Header="Название класса" Binding="{Binding Class.Name}" Width="*" />
+
+
+                            <DataGridTemplateColumn Header="Оценки" Width="*">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <ItemsControl ItemsSource="{Binding Grades}">
+                                            <ItemsControl.ItemTemplate>
+                                                <DataTemplate>
+                                                    <StackPanel Orientation="Horizontal">
+                                                        <TextBlock Text="{Binding Data}" Margin="0,0,5,0" />
+                                                        <TextBlock Text="{Binding Value}" />
+                                                    </StackPanel>
+                                                </DataTemplate>
+                                            </ItemsControl.ItemTemplate>
+                                        </ItemsControl>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+
+                </Grid>
+                
+
+            </TabItem>
+
+
+        </TabControl>
+
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Bottom" Margin="10">
+            
+            <Button Content="Добавить ученика" Margin="5" Command="{Binding RegisterStudentCommand}" />
+            <Button Content="Удалить БД" Margin="5" Command="{Binding DeleteDatabaseCommand}" />
+            <Button Content="Сгенерировать БД" Margin="5" Command="{Binding GenerateDataCommand}" />
+            <Button Content="Создать БД" Margin="5" Command="{Binding CreateDatabaseCommand}" />
+            <Button Content="Сохранить БД" Margin="5" Command="{Binding SaveDatabaseCommand}" />
+            <Button Content="Открыть БД" Margin="5" Command="{Binding OpenDatabaseCommand}" />
+        </StackPanel>
+    </Grid>
+</Window>

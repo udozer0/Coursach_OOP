@@ -1,0 +1,120 @@
+\doxysection{Coursach\+\_\+ver2.\+Model.\+Class Class Reference}
+\hypertarget{class_coursach__ver2_1_1_model_1_1_class}{}\label{class_coursach__ver2_1_1_model_1_1_class}\index{Coursach\_ver2.Model.Class@{Coursach\_ver2.Model.Class}}
+
+
+Представляет класс в школьной системе. Содержит информацию о классе, включая его идентификатор, название, текущих студентов, преподавателя и максимальное количество студентов.  
+
+
+Inheritance diagram for Coursach\+\_\+ver2.\+Model.\+Class\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coursach__ver2_1_1_model_1_1_class}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+IEnumerable$<$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_student}{Student}} $>$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_class_a7114fb64caf0c0250d036812b7956358}{Filter\+Students}} (string search\+Text)
+\begin{DoxyCompactList}\small\item\em Фильтрует студентов по заданному тексту поиска. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_a09e0612dd71e335dbb99d9e5ec53e509}\label{class_coursach__ver2_1_1_model_1_1_class_a09e0612dd71e335dbb99d9e5ec53e509} 
+{\bfseries Class} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Генерирует новый идентификатор для класса. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_class_a5aa4ff4b30f39a6d2237db96a45d4410}{Class}} (string name, string teacher, int current\+Students, int max\+Students)
+\begin{DoxyCompactList}\small\item\em Конструктор для инициализации класса с заданными параметрами. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_class_ac7a0f80da13393b10f7d3a9694cd4c3f}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string prop="{}"{})
+\begin{DoxyCompactList}\small\item\em Уведомляет об изменении свойства. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_a2412e3f41192c0930eefb58e3b255932}\label{class_coursach__ver2_1_1_model_1_1_class_a2412e3f41192c0930eefb58e3b255932} 
+string? {\bfseries Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Идентификатор класса. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_abc196ba29acc4df00a2ba1a9ab0d4f9b}\label{class_coursach__ver2_1_1_model_1_1_class_abc196ba29acc4df00a2ba1a9ab0d4f9b} 
+string? {\bfseries Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Название класса. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_aefc97bccebc91bce4006c98c54d387da}\label{class_coursach__ver2_1_1_model_1_1_class_aefc97bccebc91bce4006c98c54d387da} 
+int {\bfseries Current\+Students}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Текущее количество студентов в классе. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_a94cea9ecc09939d1b6eb74fe820ea96f}\label{class_coursach__ver2_1_1_model_1_1_class_a94cea9ecc09939d1b6eb74fe820ea96f} 
+string? {\bfseries Teacher}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Имя преподавателя класса. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_a5f60fc4eb27ac72453e9b265d88513f1}\label{class_coursach__ver2_1_1_model_1_1_class_a5f60fc4eb27ac72453e9b265d88513f1} 
+int {\bfseries Max\+Students}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Максимальное количество студентов в классе. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_a8b55a2d4700ab291fc43f5cb8427c051}\label{class_coursach__ver2_1_1_model_1_1_class_a8b55a2d4700ab291fc43f5cb8427c051} 
+Observable\+Collection$<$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_student}{Student}} $>$ {\bfseries Students}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Список студентов в классе. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_a0473a0147dd76b728ee1d0701fec6cac}\label{class_coursach__ver2_1_1_model_1_1_class_a0473a0147dd76b728ee1d0701fec6cac} 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Представляет класс в школьной системе. Содержит информацию о классе, включая его идентификатор, название, текущих студентов, преподавателя и максимальное количество студентов. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_a5aa4ff4b30f39a6d2237db96a45d4410}\index{Coursach\_ver2.Model.Class@{Coursach\_ver2.Model.Class}!Class@{Class}}
+\index{Class@{Class}!Coursach\_ver2.Model.Class@{Coursach\_ver2.Model.Class}}
+\doxysubsubsection{\texorpdfstring{Class()}{Class()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_model_1_1_class_a5aa4ff4b30f39a6d2237db96a45d4410} 
+Coursach\+\_\+ver2.\+Model.\+Class.\+Class (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{string}]{teacher}{, }\item[{int}]{current\+Students}{, }\item[{int}]{max\+Students}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор для инициализации класса с заданными параметрами. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Название класса.\\
+\hline
+{\em teacher} & Имя преподавателя.\\
+\hline
+{\em current\+Students} & Текущее количество студентов.\\
+\hline
+{\em max\+Students} & Максимальное количество студентов.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_a7114fb64caf0c0250d036812b7956358}\index{Coursach\_ver2.Model.Class@{Coursach\_ver2.Model.Class}!FilterStudents@{FilterStudents}}
+\index{FilterStudents@{FilterStudents}!Coursach\_ver2.Model.Class@{Coursach\_ver2.Model.Class}}
+\doxysubsubsection{\texorpdfstring{FilterStudents()}{FilterStudents()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_model_1_1_class_a7114fb64caf0c0250d036812b7956358} 
+IEnumerable$<$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_student}{Student}} $>$ Coursach\+\_\+ver2.\+Model.\+Class.\+Filter\+Students (\begin{DoxyParamCaption}\item[{string}]{search\+Text}{}\end{DoxyParamCaption})}
+
+
+
+Фильтрует студентов по заданному тексту поиска. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Text} & Текст для поиска студентов.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Отфильтрованный список студентов.
+\end{DoxyReturn}
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_class_ac7a0f80da13393b10f7d3a9694cd4c3f}\index{Coursach\_ver2.Model.Class@{Coursach\_ver2.Model.Class}!OnPropertyChanged@{OnPropertyChanged}}
+\index{OnPropertyChanged@{OnPropertyChanged}!Coursach\_ver2.Model.Class@{Coursach\_ver2.Model.Class}}
+\doxysubsubsection{\texorpdfstring{OnPropertyChanged()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_model_1_1_class_ac7a0f80da13393b10f7d3a9694cd4c3f} 
+void Coursach\+\_\+ver2.\+Model.\+Class.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{prop}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Уведомляет об изменении свойства. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & Имя изменившегося свойства.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Udozer/source/repos/\+OOP/nt/\+Coursach\+\_\+ver2/\+Coursach\+\_\+ver2/\+Model/Class.\+cs\end{DoxyCompactItemize}

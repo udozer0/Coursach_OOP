@@ -1,0 +1,101 @@
+\doxysection{Coursach\+\_\+ver2.\+Model.\+Student Class Reference}
+\hypertarget{class_coursach__ver2_1_1_model_1_1_student}{}\label{class_coursach__ver2_1_1_model_1_1_student}\index{Coursach\_ver2.Model.Student@{Coursach\_ver2.Model.Student}}
+
+
+Представляет студента в школьной системе. Содержит информацию об идентификаторе, имени, возрасте, идентификаторе класса, состоянии выбора и связанных оценках.  
+
+
+Inheritance diagram for Coursach\+\_\+ver2.\+Model.\+Student\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coursach__ver2_1_1_model_1_1_student}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_student_a59ef53e7a4cf74e0d5f3e9c45fbcb030}{Student}} (string name, int age, \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_class}{Class}} \+\_\+class)
+\begin{DoxyCompactList}\small\item\em Конструктор для инициализации студента с заданными параметрами. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_a68af18a57177ca88ecd23c8d7639887c}\label{class_coursach__ver2_1_1_model_1_1_student_a68af18a57177ca88ecd23c8d7639887c} 
+{\bfseries Student} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Генерирует новый идентификатор для студента. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_student_a521dca8662a02f2de609eaed2fc1cd63}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string prop="{}"{})
+\begin{DoxyCompactList}\small\item\em Уведомляет об изменении свойства. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_a4f92aac8ef01508d2109671a9a78c377}\label{class_coursach__ver2_1_1_model_1_1_student_a4f92aac8ef01508d2109671a9a78c377} 
+string? {\bfseries Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Идентификатор студента. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_adc71ad254855f3990426815068e2ae7f}\label{class_coursach__ver2_1_1_model_1_1_student_adc71ad254855f3990426815068e2ae7f} 
+string? {\bfseries Name}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Имя студента. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_a0ef725dfb5da4a156724584276504b87}\label{class_coursach__ver2_1_1_model_1_1_student_a0ef725dfb5da4a156724584276504b87} 
+int? {\bfseries Age}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Возраст студента. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_a918013a78d6d85af509b86d2eebc2b54}\label{class_coursach__ver2_1_1_model_1_1_student_a918013a78d6d85af509b86d2eebc2b54} 
+string {\bfseries Class\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Идентификатор класса, в котором обучается студент. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_a6f8480f487eed33325cd69d519766167}\label{class_coursach__ver2_1_1_model_1_1_student_a6f8480f487eed33325cd69d519766167} 
+bool {\bfseries Is\+Selected}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Состояние выбора студента. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_aa5fb098f87afc26dceb5cad59a280078}\label{class_coursach__ver2_1_1_model_1_1_student_aa5fb098f87afc26dceb5cad59a280078} 
+\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_class}{Class}} {\bfseries Class}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Связанный объект класса. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_aa76fd0e262dfaa24ad4e1299ad468e62}\label{class_coursach__ver2_1_1_model_1_1_student_aa76fd0e262dfaa24ad4e1299ad468e62} 
+Observable\+Collection$<$ \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_grade}{Grade}} $>$ {\bfseries Grades} = new Observable\+Collection$<$\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_grade}{Grade}}$>$()\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Коллекция оценок студента. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_aeb351e13c45f117a2fa166252d69dbdc}\label{class_coursach__ver2_1_1_model_1_1_student_aeb351e13c45f117a2fa166252d69dbdc} 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Представляет студента в школьной системе. Содержит информацию об идентификаторе, имени, возрасте, идентификаторе класса, состоянии выбора и связанных оценках. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_a59ef53e7a4cf74e0d5f3e9c45fbcb030}\index{Coursach\_ver2.Model.Student@{Coursach\_ver2.Model.Student}!Student@{Student}}
+\index{Student@{Student}!Coursach\_ver2.Model.Student@{Coursach\_ver2.Model.Student}}
+\doxysubsubsection{\texorpdfstring{Student()}{Student()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_model_1_1_student_a59ef53e7a4cf74e0d5f3e9c45fbcb030} 
+Coursach\+\_\+ver2.\+Model.\+Student.\+Student (\begin{DoxyParamCaption}\item[{string}]{name}{, }\item[{int}]{age}{, }\item[{\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_class}{Class}}}]{\+\_\+class}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор для инициализации студента с заданными параметрами. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & Имя студента.\\
+\hline
+{\em age} & Возраст студента.\\
+\hline
+{\em \+\_\+class} & Связанный объект класса.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_student_a521dca8662a02f2de609eaed2fc1cd63}\index{Coursach\_ver2.Model.Student@{Coursach\_ver2.Model.Student}!OnPropertyChanged@{OnPropertyChanged}}
+\index{OnPropertyChanged@{OnPropertyChanged}!Coursach\_ver2.Model.Student@{Coursach\_ver2.Model.Student}}
+\doxysubsubsection{\texorpdfstring{OnPropertyChanged()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_model_1_1_student_a521dca8662a02f2de609eaed2fc1cd63} 
+void Coursach\+\_\+ver2.\+Model.\+Student.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{prop}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Уведомляет об изменении свойства. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & Имя изменившегося свойства.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Udozer/source/repos/\+OOP/nt/\+Coursach\+\_\+ver2/\+Coursach\+\_\+ver2/\+Model/Student.\+cs\end{DoxyCompactItemize}

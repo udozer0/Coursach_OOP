@@ -1,0 +1,92 @@
+\doxysection{Coursach\+\_\+ver2.\+Hellper.\+Relay\+Command Class Reference}
+\hypertarget{class_coursach__ver2_1_1_hellper_1_1_relay_command}{}\label{class_coursach__ver2_1_1_hellper_1_1_relay_command}\index{Coursach\_ver2.Hellper.RelayCommand@{Coursach\_ver2.Hellper.RelayCommand}}
+
+
+Реализация интерфейса ICommand для создания команд в WPF. Позволяет связывать действия и условия их выполнения с элементами управления.  
+
+
+Inheritance diagram for Coursach\+\_\+ver2.\+Hellper.\+Relay\+Command\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coursach__ver2_1_1_hellper_1_1_relay_command}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_coursach__ver2_1_1_hellper_1_1_relay_command_a5d4a08f0b114aa02dcb0fa6cf0984cc5}{Relay\+Command}} (Action$<$ object?$>$ execute, Func$<$ object?, bool $>$? can\+Execute=null)
+\begin{DoxyCompactList}\small\item\em Конструктор команды. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_coursach__ver2_1_1_hellper_1_1_relay_command_a90ecb3f8acf57c2df739b2ec37eb34a8}{Can\+Execute}} (object? parameter)
+\begin{DoxyCompactList}\small\item\em Определяет, может ли команда выполняться. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coursach__ver2_1_1_hellper_1_1_relay_command_a6edccab7cdcfa0100735e273bbf86dfa}{Execute}} (object? parameter)
+\begin{DoxyCompactList}\small\item\em Выполняет команду. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_hellper_1_1_relay_command_ae2aff1e0c82665aabccc0dc6996ac295}\label{class_coursach__ver2_1_1_hellper_1_1_relay_command_ae2aff1e0c82665aabccc0dc6996ac295} 
+Event\+Handler? {\bfseries Can\+Execute\+Changed}\hspace{0.3cm}{\ttfamily  \mbox{[}add, remove\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Событие, вызываемое при изменении условий выполнения команды. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Реализация интерфейса ICommand для создания команд в WPF. Позволяет связывать действия и условия их выполнения с элементами управления. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_coursach__ver2_1_1_hellper_1_1_relay_command_a5d4a08f0b114aa02dcb0fa6cf0984cc5}\index{Coursach\_ver2.Hellper.RelayCommand@{Coursach\_ver2.Hellper.RelayCommand}!RelayCommand@{RelayCommand}}
+\index{RelayCommand@{RelayCommand}!Coursach\_ver2.Hellper.RelayCommand@{Coursach\_ver2.Hellper.RelayCommand}}
+\doxysubsubsection{\texorpdfstring{RelayCommand()}{RelayCommand()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_hellper_1_1_relay_command_a5d4a08f0b114aa02dcb0fa6cf0984cc5} 
+Coursach\+\_\+ver2.\+Hellper.\+Relay\+Command.\+Relay\+Command (\begin{DoxyParamCaption}\item[{Action$<$ object?$>$}]{execute}{, }\item[{Func$<$ object?, bool $>$?}]{can\+Execute}{ = {\ttfamily null}}\end{DoxyParamCaption})}
+
+
+
+Конструктор команды. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em execute} & Действие, выполняемое командой.\\
+\hline
+{\em can\+Execute} & Функция, определяющая, может ли команда выполняться.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coursach__ver2_1_1_hellper_1_1_relay_command_a90ecb3f8acf57c2df739b2ec37eb34a8}\index{Coursach\_ver2.Hellper.RelayCommand@{Coursach\_ver2.Hellper.RelayCommand}!CanExecute@{CanExecute}}
+\index{CanExecute@{CanExecute}!Coursach\_ver2.Hellper.RelayCommand@{Coursach\_ver2.Hellper.RelayCommand}}
+\doxysubsubsection{\texorpdfstring{CanExecute()}{CanExecute()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_hellper_1_1_relay_command_a90ecb3f8acf57c2df739b2ec37eb34a8} 
+bool Coursach\+\_\+ver2.\+Hellper.\+Relay\+Command.\+Can\+Execute (\begin{DoxyParamCaption}\item[{object?}]{parameter}{}\end{DoxyParamCaption})}
+
+
+
+Определяет, может ли команда выполняться. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Параметр команды.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, если команда может выполняться; иначе False.
+\end{DoxyReturn}
+\Hypertarget{class_coursach__ver2_1_1_hellper_1_1_relay_command_a6edccab7cdcfa0100735e273bbf86dfa}\index{Coursach\_ver2.Hellper.RelayCommand@{Coursach\_ver2.Hellper.RelayCommand}!Execute@{Execute}}
+\index{Execute@{Execute}!Coursach\_ver2.Hellper.RelayCommand@{Coursach\_ver2.Hellper.RelayCommand}}
+\doxysubsubsection{\texorpdfstring{Execute()}{Execute()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_hellper_1_1_relay_command_a6edccab7cdcfa0100735e273bbf86dfa} 
+void Coursach\+\_\+ver2.\+Hellper.\+Relay\+Command.\+Execute (\begin{DoxyParamCaption}\item[{object?}]{parameter}{}\end{DoxyParamCaption})}
+
+
+
+Выполняет команду. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parameter} & Параметр команды.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Udozer/source/repos/\+OOP/nt/\+Coursach\+\_\+ver2/\+Coursach\+\_\+ver2/\+Hellper/Relay\+Command.\+cs\end{DoxyCompactItemize}

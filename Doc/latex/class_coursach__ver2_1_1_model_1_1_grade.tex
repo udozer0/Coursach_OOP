@@ -1,0 +1,103 @@
+\doxysection{Coursach\+\_\+ver2.\+Model.\+Grade Class Reference}
+\hypertarget{class_coursach__ver2_1_1_model_1_1_grade}{}\label{class_coursach__ver2_1_1_model_1_1_grade}\index{Coursach\_ver2.Model.Grade@{Coursach\_ver2.Model.Grade}}
+
+
+Представляет оценку студента в школьной системе. Содержит информацию об идентификаторе, дате, значении оценки, а также связанном студенте и предмете.  
+
+
+Inheritance diagram for Coursach\+\_\+ver2.\+Model.\+Grade\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_coursach__ver2_1_1_model_1_1_grade}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_a7f37d0bf520326b1bd5a76605584300b}\label{class_coursach__ver2_1_1_model_1_1_grade_a7f37d0bf520326b1bd5a76605584300b} 
+{\bfseries Grade} ()
+\begin{DoxyCompactList}\small\item\em Конструктор по умолчанию. Генерирует новый идентификатор для оценки. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_grade_a6a93718f1a1b1b9966487109fc46fb5b}{Grade}} (string data, int value, \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_student}{Student}} student, \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_subject}{Subject}} subject)
+\begin{DoxyCompactList}\small\item\em Конструктор для инициализации оценки с заданными параметрами. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_grade_ac4bd7f2956299f3d640574ebfe5e6cb0}{On\+Property\+Changed}} (\mbox{[}Caller\+Member\+Name\mbox{]} string prop="{}"{})
+\begin{DoxyCompactList}\small\item\em Уведомляет об изменении свойства. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_a31e6333eb15b48ef92ffee1808359525}\label{class_coursach__ver2_1_1_model_1_1_grade_a31e6333eb15b48ef92ffee1808359525} 
+string? {\bfseries Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Идентификатор оценки. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_a1c45cbfa069ee5d0511e84d2773461bf}\label{class_coursach__ver2_1_1_model_1_1_grade_a1c45cbfa069ee5d0511e84d2773461bf} 
+string {\bfseries Data}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Дата оценки. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_a84a9baae5b03b38b9c52637216fc517c}\label{class_coursach__ver2_1_1_model_1_1_grade_a84a9baae5b03b38b9c52637216fc517c} 
+int {\bfseries Value}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Значение оценки. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_a62233813ea22c1333e8d7b892ca60bcf}\label{class_coursach__ver2_1_1_model_1_1_grade_a62233813ea22c1333e8d7b892ca60bcf} 
+\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_student}{Student}} {\bfseries Student}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Связанный студент. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_a9b4d9412b7df861dcbaf04e46a111c45}\label{class_coursach__ver2_1_1_model_1_1_grade_a9b4d9412b7df861dcbaf04e46a111c45} 
+string {\bfseries Student\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Идентификатор связанного студента. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_a2396bdccc72174d5666a6203b9d8d8cf}\label{class_coursach__ver2_1_1_model_1_1_grade_a2396bdccc72174d5666a6203b9d8d8cf} 
+\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_subject}{Subject}} {\bfseries Subject}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Связанный предмет. \end{DoxyCompactList}\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_ae13b433da4e705a5cabcd86c28581f09}\label{class_coursach__ver2_1_1_model_1_1_grade_ae13b433da4e705a5cabcd86c28581f09} 
+string {\bfseries Subject\+Id}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\begin{DoxyCompactList}\small\item\em Идентификатор связанного предмета. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Events}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_aae52f79f2cb9c5cc5bf38d37eff16f15}\label{class_coursach__ver2_1_1_model_1_1_grade_aae52f79f2cb9c5cc5bf38d37eff16f15} 
+Property\+Changed\+Event\+Handler {\bfseries Property\+Changed}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Представляет оценку студента в школьной системе. Содержит информацию об идентификаторе, дате, значении оценки, а также связанном студенте и предмете. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_a6a93718f1a1b1b9966487109fc46fb5b}\index{Coursach\_ver2.Model.Grade@{Coursach\_ver2.Model.Grade}!Grade@{Grade}}
+\index{Grade@{Grade}!Coursach\_ver2.Model.Grade@{Coursach\_ver2.Model.Grade}}
+\doxysubsubsection{\texorpdfstring{Grade()}{Grade()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_model_1_1_grade_a6a93718f1a1b1b9966487109fc46fb5b} 
+Coursach\+\_\+ver2.\+Model.\+Grade.\+Grade (\begin{DoxyParamCaption}\item[{string}]{data}{, }\item[{int}]{value}{, }\item[{\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_student}{Student}}}]{student}{, }\item[{\mbox{\hyperlink{class_coursach__ver2_1_1_model_1_1_subject}{Subject}}}]{subject}{}\end{DoxyParamCaption})}
+
+
+
+Конструктор для инициализации оценки с заданными параметрами. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data} & Дата оценки.\\
+\hline
+{\em value} & Значение оценки.\\
+\hline
+{\em student} & Связанный студент.\\
+\hline
+{\em subject} & Связанный предмет.\\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_coursach__ver2_1_1_model_1_1_grade_ac4bd7f2956299f3d640574ebfe5e6cb0}\index{Coursach\_ver2.Model.Grade@{Coursach\_ver2.Model.Grade}!OnPropertyChanged@{OnPropertyChanged}}
+\index{OnPropertyChanged@{OnPropertyChanged}!Coursach\_ver2.Model.Grade@{Coursach\_ver2.Model.Grade}}
+\doxysubsubsection{\texorpdfstring{OnPropertyChanged()}{OnPropertyChanged()}}
+{\footnotesize\ttfamily \label{class_coursach__ver2_1_1_model_1_1_grade_ac4bd7f2956299f3d640574ebfe5e6cb0} 
+void Coursach\+\_\+ver2.\+Model.\+Grade.\+On\+Property\+Changed (\begin{DoxyParamCaption}\item[{\mbox{[}\+Caller\+Member\+Name\mbox{]} string}]{prop}{ = {\ttfamily "{}"{}}}\end{DoxyParamCaption})}
+
+
+
+Уведомляет об изменении свойства. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em prop} & Имя изменившегося свойства.\\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/\+Udozer/source/repos/\+OOP/nt/\+Coursach\+\_\+ver2/\+Coursach\+\_\+ver2/\+Model/Grade.\+cs\end{DoxyCompactItemize}
